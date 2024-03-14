@@ -1,1 +1,1 @@
-https://andratodor.github.io/goit-markup-kw-05/
+https://andratodor.github.io/goit-markup-kw-06/
