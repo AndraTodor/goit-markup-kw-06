@@ -1,6 +1,7 @@
 :root {
     --brand-color: #2E2F42;
     --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -178,6 +179,92 @@ address a, img{
     outline: none;
     border-style: none;
     margin-bottom: 24px;
+}
+.inputs {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.modal-content p {
+    --font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-top: 48px;
+    margin-bottom: 16px;
+}
+.lable-input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 360px;
+}
+.lable-style {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+.input-with-icon {
+    padding: 8px 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+    text-align: center;
+}
+.input-icon {
+    width: 18px;
+    height: 24px;
+    padding: 3px 0;
+    position: absolute;
+    top: 26px;
+    left: 16px;
+    pointer-events: none;
+}
+textarea {
+    height: 120px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+.checkbox {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    margin-top: 16px;
+}
+.checkbox span {
+    line-height: 1.33;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #4d5ae5;
+}
+.send-btn {
+    border-radius: 4px;
+    padding: 16px 32px;
+    width: 169px;
+    height: 56px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background: #4d5ae5;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    outline: none;
 }
 
 /* Feature section */

@@ -44,7 +44,47 @@
         <div class="modal is-hidden" data-modal>
           <div class="modal-content">
           <button type="button" class="close-btn" data-modal-close>&times;</button>
-        <p>Leave your contacts and we will call you back</p>
+          
+          <form name="modal_form" class="modal-form" action="#" method="post">
+            <p>Leave your contacts and we will call you back</p>
+            <div class="inputs">
+            <div class="lable-input">
+              <label for="name" class="lable-style">Name</label>
+              <input type="text" id="name" name="Name" required class="input-with-icon" />
+               <svg class="input-icon">
+                <use xlink:href="./images/symbol-defs.svg#icon-person"></use>
+              </svg>
+            </div>
+
+            <div class="lable-input">
+              <label for="phone" class="lable-style">Phone</label>
+              <input type="tel" id="phone" autocomplete="tel" name="Phone" required class="input-with-icon" />
+               <svg class="input-icon">
+                <use xlink:href="./images/symbol-defs.svg#icon-Vector-phone"></use>
+              </svg>
+            </div>
+
+            <div class="lable-input">
+              <label for="email" class="lable-style">Email</label>
+              <input type="mail" id="email" autocomplete="mail" name="Email" required class="input-with-icon" />
+               <svg class="input-icon">
+                <use xlink:href="./images/symbol-defs.svg#icon-Vector-mail"></use>
+              </svg>
+            </div>
+
+            <div class="lable-input">
+              <label for="comments" class="lable-style">Comments</label>
+              <textarea name="comments" id="comments" placeholder="Text input"></textarea>
+            </div>
+          </div>
+
+          <div class="checkbox">
+            <input type="checkbox" id="term" name="checkbox" required>
+            <label for="term" class="lable-style">I accept the terms and conditions of the <span>Privacy Policy</span></label>
+          </div>
+
+          <button type="submit" class="send-btn">Send</button>
+          </form>
           </div>
         </div>
       </section>
