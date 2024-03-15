@@ -265,6 +265,8 @@ textarea {
     text-align: center;
     color: #fff;
     outline: none;
+    position: relative;
+    left: 25%;
 }
 
 /* Feature section */
@@ -343,13 +345,13 @@ h2 {
     height: 460px;
 }
 .card-team p{
-    font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: #434455;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #434455;
 }
 .card.team h3{
     text-align: center;
@@ -451,14 +453,58 @@ h2 {
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.02em;
-    text-align: left;
     padding: 100px 0;
     display: flex;
-    gap: 120px;
+    justify-content: space-between;
 }
 .footer-paragraph {
     width: 264px;
     margin-top: 16px;
+}
+
+.subscribe-input{
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+}
+.subscribe-input::placeholder{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #fff;
+    margin-left: 16px;
+}
+.subscribe-btn {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background: #4d5ae5;
+    border-radius: 4px;
+    padding: 8px 24px;
+    width: 165px;
+    height: 40px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    gap: 16px;
+}
+.subscribe-btn:hover,
+.subscribe-btn:active{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background: #404bbf;
+}
+.subscribe-btn svg{
+    width: 24px;
+    height: 24px;
+    fill: #fff;
 }
 
 /* Portofolio */
