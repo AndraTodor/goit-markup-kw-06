@@ -2,7 +2,10 @@
     --brand-color: #2E2F42;
     --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     --font-family: "Roboto", sans-serif;
+    --primary-brand: #4D5AE5;
+    --hover-color: #404BBF;
 }
+
 
 body {
     font-family: "Roboto", sans-serif;
@@ -33,7 +36,7 @@ a {
     margin-right: 10px;
 }
 .logo {
-    color: #4D5AE5;
+    color: var(--primary-brand);
     font-family: 'Raleway';
     font-size: 18px;
     font-weight: 800;
@@ -63,7 +66,7 @@ a {
     min-width: 500px;
 }
 .current-page {
-    border-bottom: 4px solid #4D5AE5;
+    border-bottom: 4px solid var(--primary-brand);
     width: 100%;
     border-radius: 2px;
     padding-bottom: 20px;
@@ -73,7 +76,7 @@ a {
     margin-right: 20px;
 }
 a:hover {
-    color: #404BBF;
+    color: var(--hover-color);
     cursor: pointer;
     transition: var(--transition)
 }
@@ -126,10 +129,10 @@ address a, img{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     padding: 16px 32px;
     cursor: pointer;
-    background: #4d5ae5;
+    background: var(--primary-brand);
 }
 .hero-button:hover{
-    background-color: #404BBF;
+    background-color: var(--hover-color);
     transition: var(--transition);
 }
 .is-hidden {
@@ -219,6 +222,9 @@ address a, img{
     height: 40px;
     text-align: center;
 }
+.input-with-icon:hover {
+    border-color: var(--primary-brand);
+}
 .input-icon {
     width: 18px;
     height: 24px;
@@ -228,6 +234,10 @@ address a, img{
     left: 16px;
     pointer-events: none;
 }
+.input-with-icon:hover + .input-icon use{
+    fill: var(--primary-brand);
+}
+
 textarea {
     height: 120px;
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -239,6 +249,9 @@ textarea {
     letter-spacing: 0.04em;
     color: #8e8f99;
 }
+textarea:hover{
+    border-color: var(--primary-brand);
+}
 .checkbox {
     display: flex;
     gap: 8px;
@@ -249,7 +262,7 @@ textarea {
     line-height: 1.33;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    color: #4d5ae5;
+    color: var(--primary-brand);
 }
 .send-btn {
     border-radius: 4px;
@@ -257,7 +270,7 @@ textarea {
     width: 169px;
     height: 56px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background: #4d5ae5;
+    background: var(--primary-brand);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -382,12 +395,14 @@ h2 {
     justify-content: center;
     align-items: center;
     transition: background-color, color var(--transition);
-    color: #858588;
+    /* color: #858588; */
+    color: #fff;
+    background: var(--primary-brand);
 }
 
 .icon:hover,
 .icon:active {
-    background: #4D5AE5;
+    background: var(--hover-color);
     color: #fff;
     transition: transform var(--transition);
 }
@@ -414,8 +429,8 @@ h2 {
 
 .icon-border:hover,
 .icon-border:active{
-    border: 1px solid #4D5AE5;
-    color: #4D5AE5;
+    border: 1px solid var(--hover-color);
+    color: var(--hover-color);
     transition: transform var(--transition);
 }
 
@@ -439,11 +454,33 @@ h2 {
     line-height: 1.16667;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #4d5ae5;
+    color: var(--primary-brand);
 }
 .footer{
     margin: 0 auto;
     background-color: var(--brand-color);
+}
+.icon-footer {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color, color var(--transition);
+    /* color: #858588; */
+    fill: #fff;
+    background: var(--primary-brand);
+}
+
+.icon-footer:hover,
+.icon-footer:active {
+    background: #31D0AA;
+    transition: transform var(--transition);
+}
+.icons-list .icon-footer svg {
+    width: 16px;
+    height: 16px;
 }
 
 .footer-flex {
@@ -488,7 +525,7 @@ h2 {
 
 .subscribe-btn {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background: #4d5ae5;
+    background: var(--primary-brand);
     border-radius: 4px;
     padding: 8px 24px;
     width: 165px;
@@ -510,7 +547,7 @@ h2 {
 .subscribe-btn:hover,
 .subscribe-btn:active{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background: #404bbf;
+    background: var(--hover-color);
 }
 .subscribe-btn svg{
     width: 24px;
@@ -528,7 +565,7 @@ ul button {
     line-height: 24px;
     letter-spacing: 0.04em;
     text-align: center;
-    color: #4D5AE5;
+    color: var(--primary-brand);
     border: 1px solid #E7E9FC;
     padding-left: 24px;
     padding-right: 24px;
@@ -538,7 +575,7 @@ ul button {
 button:hover,
 button:focus {
     cursor: pointer;
-    background-color: #404BBF;
+    background-color: var(--hover-color);
     color: #FFFFFF;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     transition: var(--transition);
@@ -598,7 +635,7 @@ button:focus {
     height: 300px;
     width: 360px;
     position: absolute;
-    background-color: #4D5AE5;
+    background-color: var(--primary-brand);
     transform: translateY(105%);
     transition: transform var(--transition);
 }
